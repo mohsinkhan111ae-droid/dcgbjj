@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Data Selling Payment</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="emoji">📲</div>
+  <h1>Data Selling Payment</h1>
+  <p class="service">Service ID: <strong>605099281</strong></p>
+</header>
+
+<main>
+  <section class="payment-card">
+    <h2>Pay ₹49 to continue</h2>
+    <p class="upi">UPI ID: <strong>6005099281@mbk</strong></p>
+
+    <div class="qr-area" id="qrArea">
+      <img src="qr.png" alt="QR code" id="qrImg" />
+      <p class="scan-text">Scan this QR with your UPI app</p>
+    </div>
+
+    <button id="payBtn" class="btn shiny">Pay ₹49</button>
+    <button id="refundBtn" class="btn outline">Request Refund</button>
+  </section>
+
+  <section id="utrSection" class="utr hidden">
+    <h3>UTR Submission</h3>
+    <form id="utrForm">
+      <label>Name<br/><input type="text" id="name" required /></label>
+      <label>UTR / Transaction ID<br/><input type="text" id="utr" required /></label>
+      <label>Optional Phone/Email<br/><input type="text" id="contact" /></label>
+      <button type="submit" class="btn">Submit UTR</button>
+    </form>
+    <p id="utrMsg" class="muted"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Designed clean & colorful — real-feel buttons, shining effects, active interactions.</p>
+</footer>
+
+<!-- Modal for scanner display -->
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close" id="closeModal">✕</button>
+    <h3>Scan & Pay</h3>
+    <img src="qr.png" alt="QR large" class="qr-large" />
+    <p class="modal-upi">UPI: <strong>6005099281@mbk</strong></p>
+    <p>Amount: <strong>₹49</strong></p>
+    <button id="paidBtn" class="btn">I've Paid — Show UTR Form</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
